@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ghosta3.ocr.SMS">
+  <select id="selectSMS" resultType="com.ghosta3.ocr.SMS">
+    select top(1) MESSAGE as message, PHONE_NO as phoneNo from SMS_SEND where PHONE_NO = #{PHONE_NO} order by SEND_DATETIME desc
+  </select>
+</mapper>
